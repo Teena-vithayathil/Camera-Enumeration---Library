@@ -1,16 +1,15 @@
 
 #include "EnumerateCamera.h"
 
-void getCameraDetails() {
+UINT32 getCameraDetails(camera_details *cameras) {
 	HRESULT hr;
 	IMFAttributes *pAttributes;
 	IMFActivate **ppDevices;
 	UINT32 pcSourceActive = 0, i, pcchLength;
 	WCHAR *camera_name, *camera_path;
 	char name[50], path[100];
-
 	//Intializing media foundation functions
-	hr = MFStartup(MF_VERSION,MFSTARTUP_FULL);
+	hr = MFStartup(MF_VERSION, MFSTARTUP_FULL);
 	if (SUCCEEDED(hr)) {
 
 		//Create an attribute store
@@ -30,8 +29,9 @@ void getCameraDetails() {
 							//Accessing name of the camera
 							hr = ppDevices[i]->lpVtbl->GetAllocatedString(ppDevices[i], &MF_DEVSOURCE_ATTRIBUTE_FRIENDLY_NAME, &camera_name, &pcchLength);
 							if (SUCCEEDED(hr)) {
-								WideCharToMultiByte(CP_UTF8, 0, camera_name, -1,name, sizeof(name), NULL, NULL);
+								WideCharToMultiByte(CP_UTF8, 0, camera_name, -1, name, sizeof(name), NULL, NULL);
 								printf("Camera name: %s\n", name);
+								strcpy_s(cameras[i].name, sizeof(cameras[i].name), name);
 								CoTaskMemFree(camera_name);
 							}
 
@@ -41,8 +41,11 @@ void getCameraDetails() {
 								WideCharToMultiByte(CP_UTF8, 0, camera_path, -1, path, sizeof(path), NULL, NULL);
 								printf("Camera path: %s\n\n", path);
 								CoTaskMemFree(camera_path);
+								strcpy_s(cameras[i].path, sizeof(cameras[i].path), path);
 							}
+							cameras[i].ppDevices = ppDevices[i];
 						}
+						return pcSourceActive;
 					}
 					else {
 						printf("No devices connected\n");

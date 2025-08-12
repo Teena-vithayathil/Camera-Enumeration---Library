@@ -1,0 +1,5 @@
+﻿  ReadFrames.c
+c:\users\teenavithayathil\source\repos\project1\project1\readframes.c(58): warning C4013: 'MFGetAttributeSize' undefined; assuming extern returning int
+ReadFrames.obj : error LNK2001: unresolved external symbol _MFGetAttributeSize
+MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol _main
+C:\Users\TeenaVithayathil\source\repos\Project1\Release\Project1.exe : fatal error LNK1120: 2 unresolved externals

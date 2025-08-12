@@ -18,6 +18,15 @@
     <ClCompile Include="EnumerateCamera.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ReadFrames.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenCamera.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVCSettings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnumerateCamera.h">

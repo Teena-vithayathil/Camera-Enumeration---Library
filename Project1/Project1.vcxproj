@@ -114,19 +114,25 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\TeenaVithayathil\source\repos\Project1\Project1\EnumerateCamera.h</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>mfplat.lib;mf.lib;mfreadwrite.lib;mfuuid.lib;ole32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Mfplat.lib;Mf.lib;mfreadwrite.lib;ShLwApi.Lib;mfuuid.lib;strmiids.lib;ole32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EnumerateCamera.c" />
+    <ClCompile Include="ReadFrames.c" />
+    <ClCompile Include="OpenCamera.c" />
+    <ClCompile Include="UVCSettings.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnumerateCamera.h" />
