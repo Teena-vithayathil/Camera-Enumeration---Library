@@ -6,7 +6,6 @@ camera_details cameras[10];
 
 
 void getFrames(IMFActivate *ppDevice) {
-	HRESULT hr;
 	IMFMediaSource *pMediaSource = NULL;
 	IMFAttributes *pAttributes = NULL;
 	IMFSourceReader *ppSourceReader;

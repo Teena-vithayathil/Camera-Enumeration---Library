@@ -17,18 +17,40 @@
 #include <initguid.h>
 #include <combaseapi.h>
 #include <strmif.h>
+#include<string.h>
+#include <devpropdef.h>
+#include <cfgmgr32.h>
+#include <SetupAPI.h>
 
+HRESULT hr;
 
 typedef struct {
 	char name[50];
-	char path[100];
+	char path[260];
 	IMFActivate *ppDevices;
 }camera_details;
+
+typedef BOOL(WINAPI *FN_SetupDiGetDevicePropertyW)(
+	HDEVINFO DeviceInfoSet,
+	PSP_DEVINFO_DATA DeviceInfoData,
+	const DEVPROPKEY *PropertyKey,
+	DEVPROPTYPE *PropertyType,
+	PBYTE PropertyBuffer,
+	DWORD PropertyBufferSize,
+	PDWORD RequiredSize,
+	DWORD Flags
+	);
+
 
 UINT32 getCameraDetails(camera_details *cameras);
 
 void getFrames(IMFActivate *ppDevice);
 
 void getUVCSettings(IMFActivate *ppDevice);
+
+void setUVCSettings(IMFActivate *pDevice, char type[50]);
+
+BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle);
+BOOL DeInitExtension(UINT32 *handle);
 #endif
 

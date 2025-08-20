@@ -27,6 +27,9 @@
     <ClCompile Include="UVCSettings.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ExtensionUnit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnumerateCamera.h">
