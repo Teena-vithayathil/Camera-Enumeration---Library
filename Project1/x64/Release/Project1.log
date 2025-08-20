@@ -1,42 +1,43 @@
 ﻿  EnumerateCamera.c
   ExtensionUnit.c
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(48): warning C4133: 'function': incompatible types - from 'unsigned short [5]' to 'const char *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(47): warning C4133: 'function': incompatible types - from 'unsigned short [5]' to 'const char *'
 c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(44): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(334): note: see declaration of 'strncpy'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(50): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(49): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(334): note: see declaration of 'strncpy'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(94): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(108): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(115): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(126): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(142): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(142): warning C4024: 'SetupDiGetDeviceInterfaceDetailW': different types for formal and actual parameter 4
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(147): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(156): warning C4133: 'function': incompatible types - from 'char [260]' to 'PWSTR'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(156): warning C4311: 'type cast': pointer truncation from 'char [260]' to 'ULONG'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(202): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(207): warning C4133: 'function': incompatible types - from 'char [15]' to 'const wchar_t *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(224): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(236): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(248): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(255): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(259): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'UINT32 *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(259): warning C4313: 'printf': '%x' in format string conflicts with argument 1 of type 'UINT32 *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(263): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'UINT32 *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(263): warning C4313: 'printf': '%x' in format string conflicts with argument 1 of type 'UINT32 *'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(273): warning C4133: 'function': incompatible types - from 'char [35]' to 'LPCWSTR'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(78): warning C4996: 'GetVersionExW': was declared deprecated
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(92): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(105): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(112): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(123): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(134): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(134): warning C4024: 'SetupDiGetDeviceInterfaceDetailW': different types for formal and actual parameter 4
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(139): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(148): warning C4133: 'function': incompatible types - from 'char [260]' to 'PWSTR'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(148): warning C4311: 'type cast': pointer truncation from 'char [260]' to 'ULONG'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(190): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(194): warning C4133: 'function': incompatible types - from 'char [15]' to 'const wchar_t *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(211): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(223): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(235): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(242): warning C4047: 'return': 'BOOL' differs in levels of indirection from 'void *'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(258): warning C4133: 'function': incompatible types - from 'char [35]' to 'LPCWSTR'
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(76): warning C4996: 'GetVersionExW': was declared deprecated
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\sysinfoapi.h(423): note: see declaration of 'GetVersionExW'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(89): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(87): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(580): note: see declaration of 'strupr'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(91): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(89): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(334): note: see declaration of 'strncpy'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(198): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(186): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(580): note: see declaration of 'strupr'
-c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(200): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\teenavithayathil\source\repos\project1\project1\extensionunit.c(188): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\string.h(334): note: see declaration of 'strncpy'
+  ReadFirmwareVersion.c
+c:\users\teenavithayathil\source\repos\project1\project1\readfirmwareversion.c(29): warning C4312: 'type cast': conversion from 'UINT32' to 'HANDLE' of greater size
+c:\users\teenavithayathil\source\repos\project1\project1\readfirmwareversion.c(79): warning C4047: 'function': 'UINT32' differs in levels of indirection from 'UINT32 *'
+c:\users\teenavithayathil\source\repos\project1\project1\readfirmwareversion.c(79): warning C4024: 'DataReadWrite': different types for formal and actual parameter 1
   ReadFrames.c
   OpenCamera.c
+  Reset.c
   UVCSettings.c
 c:\users\teenavithayathil\source\repos\project1\project1\uvcsettings.c(45): warning C4047: 'function': 'long *' differs in levels of indirection from 'long **'
 c:\users\teenavithayathil\source\repos\project1\project1\uvcsettings.c(45): warning C4024: 'function through pointer': different types for formal and actual parameter 7

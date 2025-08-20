@@ -30,6 +30,12 @@
     <ClCompile Include="ExtensionUnit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ReadFirmwareVersion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnumerateCamera.h">

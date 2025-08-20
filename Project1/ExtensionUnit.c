@@ -44,13 +44,11 @@ BOOL FindMatchDevice(char *DeviceID) {
 		strncpy(vid_extrctd, vid_substr + 4, 4);
 		vid_extrctd[4] = '\0';
 	}
-	printf("VID: %s\n",vid_extrctd);
 	pid_substr = strstr(DeviceID, L"PID_");
 	if (pid_substr != NULL) {
 		strncpy(pid_extrctd, pid_substr + 4, 4);
 		pid_extrctd[4] = '\0';
 	}
-	printf("PID: %s\n",pid_extrctd);
 	if (strcmp(vid_extrctd, VID) == 0 && strcmp(pid_extrctd, PID) == 0) {
 		return TRUE;
 		OutputDebugStringW(L"FindMatchDevice Successfull....\n\r");
@@ -92,7 +90,6 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 		g_extrctd_InstanceID[11] = '\0';
 		OutputDebugStringW(L"ImagingDevice USB InstanceID");
 		strcpy(g_USBInstanceID, g_extrctd_InstanceID);
-		printf("USB Instance ID: %s\n", g_USBInstanceID);
 	}
 	
 	g_InterfaceDataStructue = (PSP_DEVICE_INTERFACE_DATA)malloc(sizeof(SP_DEVICE_INTERFACE_DATA));
@@ -130,14 +127,9 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 		SetupDiGetDeviceRegistryProperty(g_DeviceInfoTable, &g_DevInfoData, SPDRP_HARDWAREID, &g_dwRegType, g_PropertyValueBuffer, g_dwRegSize, NULL);
 		wchar_t *wideStr = (wchar_t *)g_PropertyValueBuffer;
 		WideCharToMultiByte(CP_ACP, 0, wideStr, -1, g_buff, MAX_PATH, NULL, NULL);
-		printf("First Hardware ID: %s\n", g_buff);
-		/*strcpy_s(g_DeviceIDFromRegistry, sizeof(g_DeviceIDFromRegistry), (char *)g_PropertyValueBuffer);
-		sprintf_s(g_buff, MAX_PATH, "DLL VID & PID = %s \r\n", g_DeviceIDFromRegistry);
-		printf("%s", g_buff);*/
 
 		free(g_PropertyValueBuffer);
 		if (FindMatchDevice(g_buff)) {
-			printf("Found Matching Device\n");
 			//Open read and write handles
 			SetupDiGetDeviceInterfaceDetail(g_DeviceInfoTable, g_InterfaceDataStructue, NULL, NULL, &g_StructureSize, NULL);
 			g_DetailedInterfaceDataStructure = (PSP_DEVICE_INTERFACE_DETAIL_DATA)(malloc(g_StructureSize));
@@ -154,10 +146,7 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 				status = CM_Get_Parent(&devInstParent, g_DevInfoData.DevInst, 0);
 				if (status == CR_SUCCESS) {
 					status = CM_Get_Device_ID(devInstParent, szDeviceInstanceID, (ULONG)szDeviceInstanceID, 0);
-					if (status == CR_SUCCESS) {
-						printf("CM_Get_Device_ID: InstanceID %s\n", szDeviceInstanceID);
-					}
-					else {
+					if (status != CR_SUCCESS) {
 						printf("CM_Get_Device_ID: Failed status = %d GetLAstError() = %d\n", status, GetLastError());
 					}
 				}
@@ -187,7 +176,6 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 
 				if (fn_SetupDiGetDevicePropertyW(g_DeviceInfoTable, &g_DevInfoData, &DEVPKEY_Device_Parent, &ulPropertyType, (BYTE*)wszDeviceInstanceID, sizeof(szDeviceInstanceID), &g_dwRegSize, 0)) {
 					WideCharToMultiByte(CP_ACP, 0, wszDeviceInstanceID, -1, szDeviceInstanceID,  sizeof(szDeviceInstanceID), NULL, NULL);
-					printf("Parent Property value: %s\n", szDeviceInstanceID);
 				}
 				else {
 					printf("fn_SetupDiGetDevicePropertyW : Failed GetLAstError() = %d \n", GetLastError());
@@ -200,7 +188,6 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 					strncpy(g_extrctd_InstanceID, g_InstanceID_substr + 6, 10);
 					g_extrctd_InstanceID[11] = '\0';
 					strcpy(g_HIDInstanceID, g_extrctd_InstanceID);
-					printf("HIDInstanceID: %s\n", g_HIDInstanceID);
 				}
 			}
 			
@@ -256,11 +243,9 @@ BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle) {
 				}
 
 				SetupDiDestroyDeviceInfoList(g_DeviceInfoTable);
-				printf("Handle Before: %x\n", *handle);
 				//Assigns write handle
 				*handle = (UINT32*)(g_WriteHandle[g_CurrInstanceIndex]);
 
-				printf("Handle After: %x\n", *handle);
 				return TRUE;
 			}
 			else
@@ -286,7 +271,6 @@ BOOL FindMatchHandle(UINT32 *handle) {
 	}
 	for(g_CurrInstanceIndex = 0; g_CurrInstanceIndex < MAX_NUMBER_OF_DEVICES; g_CurrInstanceIndex++) {
 		if (handle == (UINT32*)g_WriteHandle[g_CurrInstanceIndex]) {
-			printf("Matching handle found\n");
 			isMatchFound = TRUE;
 			break;
 		}

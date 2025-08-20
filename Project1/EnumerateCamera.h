@@ -41,6 +41,7 @@ typedef BOOL(WINAPI *FN_SetupDiGetDevicePropertyW)(
 	DWORD Flags
 	);
 
+BOOL ReadFirmwareVersion(UINT32 *handle);
 
 UINT32 getCameraDetails(camera_details *cameras);
 
@@ -51,6 +52,10 @@ void getUVCSettings(IMFActivate *ppDevice);
 void setUVCSettings(IMFActivate *pDevice, char type[50]);
 
 BOOL InitExtensionUnit(char USBInstanceID[MAX_PATH], UINT32 **handle);
+
 BOOL DeInitExtension(UINT32 *handle);
+
+BOOL ResetDevice(UINT32 *handle);
+
 #endif
 
